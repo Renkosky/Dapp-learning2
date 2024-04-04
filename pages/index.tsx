@@ -22,9 +22,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        {/* <h1 className={styles.title}>
           Welcome to <a href=''>Fast-DApp-Cli</a>!
-        </h1>
+        </h1> */}
         {hasMounted && <ConnectWallet />}
         {/* <p className={styles.description}>
           Get started by editing{' '}
@@ -57,11 +57,11 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a href='https://rainbow.me' rel='noopener noreferrer' target='_blank'>
           Made By Fast-DApp-cli
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };
