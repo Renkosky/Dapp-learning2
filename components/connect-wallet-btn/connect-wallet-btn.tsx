@@ -13,7 +13,6 @@ export default function ConnectWalletBtn() {
   const close = () => {
     setModalVisible(false);
   };
-  console.log(btcConnected, 'connected');
   if (btcConnected) {
     return <BtcAccount />;
   }

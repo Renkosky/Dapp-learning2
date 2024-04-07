@@ -21,7 +21,6 @@ export default class OKXConnector implements Connector {
       const publicKey = await okxwallet.bitcoin.getPublicKey();
       const network = await okxwallet.bitcoin.getNetwork();
       const balance = await okxwallet.bitcoin.getBalance();
-      console.log('connect success', accounts);
       return { address: accounts[0], publicKey, network, balance };
     } catch (e) {
       console.log('connect failed');

@@ -41,7 +41,6 @@ export const useBtc = () => {
   );
 
   const connector = useMemo(() => {
-    console.log(ctx.state.connectorName, 'ctx.state.connectorName');
     if (!ctx.state.connectorName) return null;
     return connectorMap[ctx.state.connectorName];
   }, [connectorMap, ctx.state.connectorName]);
@@ -53,7 +52,6 @@ export const useBtc = () => {
 
   const connect = useCallback(
     async (connectorName: BtcConnectorName) => {
-      console.log(connectorName, 'connectorName');
       try {
         if (ctx.state.connected) {
           return;

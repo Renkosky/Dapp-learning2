@@ -10,7 +10,6 @@ export const BtcProvider = ({ children }: { children: any }) => {
     network: 'livenet',
     connectorName: undefined,
   });
-  console.log(state, 'state');
 
   useEffect(() => {
     const store = localStorage.getItem('BTC_Connecter.store');
@@ -24,7 +23,6 @@ export const BtcProvider = ({ children }: { children: any }) => {
 
   useEffect(() => {
     if (state.connectorName) {
-      console.log(state);
       localStorage.setItem(
         'BTC_Connecter.store',
         JSON.stringify({ value: state })

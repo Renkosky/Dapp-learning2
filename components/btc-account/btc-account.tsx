@@ -14,7 +14,6 @@ export function BtcAccount() {
   const shortAddress = address
     ? `${address.slice(0, 6)}...${address.slice(-4)}`
     : '';
-  console.log(balance, 'balance');
   const copyAddress = () => {
     navigator.clipboard.writeText(address);
     alert('Copied to clipboard');

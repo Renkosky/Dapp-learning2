@@ -22,7 +22,6 @@ export function WalletOptions(props: WalletOptionsProps) {
   const { connectors, connect } = useConnect();
   const [loading, setLoading] = React.useState('');
   const { status } = useAccount();
-  console.log(connectors, 'connectors');
 
   const renderIcon = (connector: Connector | void) => {
     if (!connector) return <div className='mr-2 h-7 w-7' />;
@@ -49,7 +48,6 @@ export function WalletOptions(props: WalletOptionsProps) {
   useAccountEffect({
     onConnect(data) {
       setLoading('');
-      console.log('Connected!', data);
       props?.onConnect && props.onConnect();
     },
     onDisconnect() {
